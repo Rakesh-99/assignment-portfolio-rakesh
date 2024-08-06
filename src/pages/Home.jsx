@@ -29,24 +29,17 @@ const Home = () => {
                 {/* left content  */}
                 <div className=" flex justify-center md:items-start md:mt-20 lg:mt-20 items-center">
 
-                    <h1 className={`font-semibold md:text-3xl mt-10 ml-5 text-4xl ${theme === 'dark' ? 'text-white' : 'text-gray-800 '}`}> Hi There! <span className=''>👋</span>
-                        <span>
-                            <motion.h3
-                                initial={{ x: -50 }}
-                                animate={{ x: 10 }}
-                                transition={{
-                                    duration: 1,
-                                    delay: 0
-                                }}>
-                            </motion.h3>
+                    <h1 className={`font-semibold md:text-4xl mt-10 ml-5 text-4xl ${theme === 'dark' ? 'text-white' : 'text-gray-800 '}`}> Hi There! <span className=''>👋</span>
+
+                        <div>
                             I'm <span className='font-extralight text-4xltext-lg bg-clip-text bg-gradient-to-r from-cyan-600 via-cyan-500 to-yellow-400 inline-block text-transparent'> RAKESH KUMAR PARIDA.</span>
-                        </span>
+                        </div>
 
                         <TypeWriterEffect
                             textStyle={{
                                 color: 'rgb(255, 191, 0)',
-                                fontWeight: 400,
-                                fontSize: '0.8em',
+                                fontWeight: 900,
+                                fontSize: '0.9em',
 
                             }}
                             startDelay={0}
@@ -70,12 +63,7 @@ const Home = () => {
                         <img src={HeroImg} className='md:w-[500px] w-full' alt="heroImg" />
                     </div>
                 </div>
-
-
-
-
             </div>
-
 
             <div className="w-[75%] m-auto flex justify-center my-5">
                 <h1 className='lg:text-4xl text-xl md:text-4xl font-extralight'>Let me <span className=' bg-clip-text bg-gradient-to-r from-cyan-600 via-yellow-500 to-indigo-400 inline-block text-transparent font-semibold'> introduce</span> myself</h1>
