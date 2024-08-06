@@ -10,7 +10,7 @@ import { Toaster } from 'react-hot-toast';
 import ScrollToTop from './components/ScrollToTop';
 import ParticlesComponent from './components/Particles';
 import persistStore from 'redux-persist/es/persistStore';
-
+import Spinner from './components/spinner/Spinner';
 
 
 const Home = lazy(() => import('./pages/Home'));
@@ -30,7 +30,7 @@ const App = () => {
           <ScrollToTop />
           <ParticlesComponent />
           <ThemeProvider>
-            <Suspense fallback={<div>Loading..</div>}>
+            <Suspense fallback={<Spinner />}>
               <Routes>
                 <Route path='/' element={<Layout />} >
                   <Route index element={<Home />} />
