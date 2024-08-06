@@ -4,6 +4,15 @@ import { useSelector } from 'react-redux';
 import EducationCard from '../components/EducationCard';
 import Skills from '../components/Skills';
 
+import { TiHtml5 } from "react-icons/ti";
+import { FaCss3Alt } from "react-icons/fa6";
+import { RiTailwindCssLine } from "react-icons/ri";
+import { IoLogoReact } from "react-icons/io5";
+import { FaNode, } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa6";
+import { FaJava } from "react-icons/fa";
+import { SiExpress, SiJavascript, SiMongodb } from "react-icons/si";
+
 
 
 
@@ -11,6 +20,69 @@ import Skills from '../components/Skills';
 
 
 const About = () => {
+
+    const skills = [
+        {
+            skillName: 'Core Java',
+            icon: FaJava,
+        },
+        {
+            skillName: 'JavaScript',
+            icon: SiJavascript,
+
+        },
+        {
+            skillName: 'React Js',
+            icon: IoLogoReact,
+
+        },
+        {
+            skillName: 'Tailwind Css',
+            icon: RiTailwindCssLine,
+
+        },
+        {
+            skillName: 'MongoDB',
+            icon: SiMongodb,
+
+        },
+        {
+            skillName: 'Node Js',
+            icon: FaNode,
+
+        },
+        {
+            skillName: 'Express Js',
+            icon: SiExpress,
+
+        },
+        {
+            skillName: 'Git',
+            icon: FaGitAlt,
+
+        },
+        {
+            skillName: 'CSS3',
+            icon: FaGitAlt,
+
+        },
+        {
+            skillName: 'Git',
+            icon: FaCss3Alt,
+
+        },
+        {
+            skillName: 'HTML5',
+            icon: TiHtml5,
+
+        },
+    ]
+
+
+
+
+
+
 
     const { educationSlice, skillSlice } = useSelector((state) => state);
 
@@ -74,7 +146,6 @@ const About = () => {
                 }
             </div>
 
-
             {/* Skills  */}
             <h1 className=' text-center md:text-8xl lg:text-8xl  text-2xl font-bold  bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent '>Skills</h1>
             <div className="flex min-h-screen justify-center w-full">
@@ -83,9 +154,11 @@ const About = () => {
 
                 <div className=" grid my-10 lg:grid-cols-4  sm:grid-cols-1 md:grid-cols-4 gap-5 w-full ">
                     {
-                        skillSlice.map((val, i) => {
+                        skills && skills.map((val, i) => {
 
+                            console.log(val, '......................')
                             return (
+
                                 <div className={`border hover:shadow-2xl hover:animate-pulse hover:scale-95 duration-500 rounded-md cursor-pointer flex  flex-col justify-center items-center ${theme === 'dark' ? 'shadow-green-900 shadow-md hover:green-600 hover:shadow-green-500' : 'shadow-green-100 shadow-md hover:border-green-600 hover:shadow-green-500'} `} key={i}>
 
                                     <Skills  {...val} />

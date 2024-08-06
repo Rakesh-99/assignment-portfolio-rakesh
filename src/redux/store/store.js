@@ -1,7 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import themeSlice from '../slice/ThemeSlice';
 import educationSlice from '../slice/EducationSlice';
-import skillSlice from '../slice/skillSlice';
 import storage from 'redux-persist/lib/storage';
 import persistReducer from 'redux-persist/es/persistReducer';
 
@@ -17,7 +16,6 @@ const persistConfig = {
 const reducers = combineReducers({
     themeToggle: themeSlice,
     educationSlice: educationSlice,
-    skillSlice: skillSlice
 });
 
 const persistedReducers = persistReducer(persistConfig, reducers);
