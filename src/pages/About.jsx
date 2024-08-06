@@ -126,7 +126,7 @@ const About = () => {
             {/* Education details  */}
             <hr className='my-10' />
 
-            <h1 className='text-center md:text-8xl lg:text-8xl  text-2xl font-bold  bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent '>Education</h1>
+            <h1 className='text-center md:text-8xl lg:text-8xl  text-2xl font-bold  bg-clip-text bg-gradient-to-r from-orange-500 via-green-500 to-violet-600 inline-block text-transparent '>Education</h1>
 
 
             <div className=" grid-cols-1 grid md:grid-cols-2 min-h-80 lg:grid-cols-2 my-10 rounded-2xl">
@@ -134,7 +134,6 @@ const About = () => {
                 {
 
                     educationInfo && educationInfo.map((values, i) => {
-
                         return (
 
                             <div className=" mx-2" key={i}>
@@ -147,16 +146,22 @@ const About = () => {
             </div>
 
             {/* Skills  */}
-            <h1 className=' text-center md:text-8xl lg:text-8xl  text-2xl font-bold  bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent '>Skills</h1>
+            <h1 className='text-center md:text-8xl lg:text-8xl  text-2xl font-bold bg-clip-text bg-gradient-to-r from-orange-500 via-green-500 to-violet-600 inline-block text-transparent'>Skills</h1>
             <div className="flex min-h-screen justify-center w-full">
+
+
+
+
+
+
+
+
 
 
 
                 <div className=" grid my-10 lg:grid-cols-4  sm:grid-cols-1 md:grid-cols-4 gap-5 w-full ">
                     {
                         skills && skills.map((val, i) => {
-
-                            console.log(val, '......................')
                             return (
 
                                 <div className={`border hover:shadow-2xl hover:animate-pulse hover:scale-95 duration-500 rounded-md cursor-pointer flex  flex-col justify-center items-center ${theme === 'dark' ? 'shadow-green-900 shadow-md hover:green-600 hover:shadow-green-500' : 'shadow-green-100 shadow-md hover:border-green-600 hover:shadow-green-500'} `} key={i}>

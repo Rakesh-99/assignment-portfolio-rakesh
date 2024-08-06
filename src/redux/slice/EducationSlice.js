@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import nitClg from '../../assets/collegeImage.jpg';
-import polytechnic from '../../assets/polytechnicImg.jpg';
+import college1 from '../../assets/college1.jpg';
+import college2 from '../../assets/college2.jpg';
 
 
 const educationInfo = [
@@ -8,15 +8,15 @@ const educationInfo = [
         collegeName: 'Nalanda Institute Of Technology, Bhubaneswar',
         timeStamp: '2021-2024',
         specialization: 'Computer Science',
-        img: nitClg,
+        img: college1,
         degree: 'B.TECH'
     },
     {
         collegeName: 'Government Polytechnic Bhubaneswar, Odisha',
         timeStamp: '2018-2021',
         specialization: 'Information Technology',
-        img: polytechnic,
-        degree : 'Diploma Engg..'
+        img: college2,
+        degree: 'Diploma'
     }
 ]
 

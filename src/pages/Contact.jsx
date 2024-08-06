@@ -117,41 +117,64 @@ const Contact = () => {
 
     return (
         <>
-            <div className="min-h-screen lg:flex-row md:flex-row flex-col  items-center md:justify-center lg:justify-center md:w-[75%] lg:w-[75%] w-[95%] m-auto flex  gap-5 ">
+            <div className="min-h-screen lg:flex-row md:flex-row flex-col  items-center justify-center md:w-[75%] m-auto flex  gap-5 ">
 
 
-                <div className="w-full lg:w-1/2 md:w-1/2">
+                <div className="w-[400px] lg:w-1/2 md:w-1/2">
                     <img src={contactImg} className='w-full' alt="contactImg" />
                 </div>
 
-                <form ref={form} onSubmit={formSubmitHandle} className=' flex  flex-col gap-4 justify-center  md:w-1/2 lg:w-1/2 w-full items-center'>
+                <form
+                    ref={form}
+                    onSubmit={formSubmitHandle}
+                    className={`flex flex-col gap-4 hover:scale-95 duration-1000 justify-center lg:w-1/2 md:w-1/2 w-full border rounded-md py-4 px-4 shadow-xl  items-center ${theme === 'dark' ? ' border-zinc-700 hover:border-orange-400 border' : 'hover:border-orange-300'}`}>
 
-                    <div className="flex items-center gap-2">
-                        <BiPhoneCall size={26} />
+                    <div className="flex items-center  w-full gap-2">
+                        <BiPhoneCall
+                            size={26}
+                            color='orange' />
                         <h1 className='text-2xl font-semibold  bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-500 to-orange-400 inline-block text-transparent'>Contact</h1>
                     </div>
 
-                    <div className=" flex flex-col w-full">
+                    <div className=" flex flex-col  ">
                         <label className='text-sm font-semibold'>Name</label>
-                        <input autoComplete='off' name='user_name' onChange={inputChangeHandle} type="text" placeholder='Enter user_name..' className={`py-2 transition-all duration-500 px-3 rounded-sm w-full lg:w-96 md:w-96 outline-none ${theme === 'dark' ? 'bg-zinc-700 text-white focus:bg-gray-800' : 'bg-gray-200 focus:bg-gray-300 text-gray-800 '}`} />
+                        <input
+                            autoComplete='off'
+                            name='user_name'
+                            onChange={inputChangeHandle}
+                            type="text"
+                            placeholder='Enter user_name..'
+                            className={`py-2 border-orange-500 transition-all duration-500 px-3 rounded-sm w-72 lg:w-96 md:w-96 outline-none ${theme === 'dark' ? 'bg-zinc-700 text-white focus:bg-gray-800' : 'bg-gray-200 focus:bg-gray-300 text-gray-800 '}`}
+                        />
                     </div>
 
-                    <div className=" flex flex-col w-full">
+                    <div className=" flex flex-col">
                         <label className='text-sm font-semibold'>Email</label>
-
-                        <input autoComplete='off' name='user_email' onChange={inputChangeHandle} type="user_email" placeholder='Enter user_name..' className={`py-2 transition-all duration-500 px-3 rounded-sm w-full lg:w-96 md:w-96 outline-none ${theme === 'dark' ? 'bg-zinc-700 text-white focus:bg-gray-800' : 'bg-gray-200 focus:bg-gray-300 text-gray-800 '}`} />
-
+                        <input
+                            autoComplete='off'
+                            name='user_email'
+                            onChange={inputChangeHandle}
+                            type="user_email" placeholder='Enter user_name..'
+                            className={`py-2 transition-all duration-500 px-3 rounded-sm w-72 lg:w-96 md:w-96 outline-none ${theme === 'dark' ? 'bg-zinc-700 text-white focus:bg-gray-800' : 'bg-gray-200 focus:bg-gray-300 text-gray-800 '}`} />
                     </div>
 
-                    <div className=" flex flex-col w-full">
+                    <div className=" flex flex-col">
 
                         <label className='text-sm font-semibold'>Message</label>
-                        <textarea autoComplete='off' placeholder='Enter your message..' onChange={inputChangeHandle} name="message" className={`py-2 px-3 transition-all duration-500 rounded-sm w-full lg:w-96 md:w-96 outline-none ${theme === 'dark' ? 'bg-zinc-700 text-white focus:bg-gray-800' : 'bg-gray-200 focus:bg-gray-300 text-gray-800 '} `} />
+                        <textarea
+                            autoComplete='off'
+                            placeholder='Enter your message..'
+                            onChange={inputChangeHandle}
+                            name="message"
+                            className={`py-2 px-3 transition-all duration-500 rounded-sm w-72 lg:w-96 md:w-96 outline-none ${theme === 'dark' ? 'bg-zinc-700 text-white focus:bg-gray-800' : 'bg-gray-200 focus:bg-gray-300 text-gray-800 '} `} />
 
                     </div>
 
 
-                    <button type='submit' value='send' className='bg-gradient-to-r hover:shadow-orange-600 shadow-2xl transition-all duration-500   from-red-500 to-orange-500 py-2 text-gray-300 text-sm font-semibold w-60 rounded-sm active:scale-95 '>
+                    <button
+                        type='submit'
+                        value='send'
+                        className='bg-gradient-to-r hover:shadow-orange-600 shadow-2xl transition-all duration-500   from-red-500 to-orange-500 py-2 text-gray-300 text-sm font-semibold px-10 rounded-sm active:scale-95 '>
                         Send message
                     </button>
                 </form>
