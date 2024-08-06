@@ -8,7 +8,7 @@ import './Spinner.css';
 const Spinner = () => {
     return (
         <>
-            <div className="min-h-screen w-full justify-center items-center">
+            <div className="flex justify-center items-center min-h-screen ">
                 <span className='loader'></span>
             </div>
 

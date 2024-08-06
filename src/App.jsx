@@ -32,6 +32,7 @@ const App = () => {
           <ThemeProvider>
             <Suspense fallback={<Spinner />}>
               <Routes>
+                <Route path='/spinner' element={<Spinner />} />
                 <Route path='/' element={<Layout />} >
                   <Route index element={<Home />} />
                   <Route path='/contact' element={<Contact />} />

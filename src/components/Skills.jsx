@@ -1,7 +1,18 @@
 import React from 'react'
+import { TiHtml5 } from "react-icons/ti";
+import { FaCss3Alt } from "react-icons/fa6";
+import { RiTailwindCssLine } from "react-icons/ri";
+import { IoLogoReact } from "react-icons/io5";
+import { FaNode, } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa6";
+import { FaJava } from "react-icons/fa";
+import { SiExpress, SiJavascript, SiMongodb } from "react-icons/si";
+
 
 const Skills = (val) => {
 
+
+    
     const { skillName, icon: Icon } = val;
 
 
