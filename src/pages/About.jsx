@@ -102,10 +102,10 @@ const About = () => {
 
 
     return (
-        <div className=" px-5 flex flex-col w-[75%] m-auto">
+        <div className=" px-5 flex flex-col w-[95%] md:w-[75%] m-auto">
 
             <div className="heroImg w-full  flex justify-center py-5">
-                <img src={AboutImg} alt="aboutImg" className=' md:w-1/2 lg:h-1/2 w-96 max-[500px]:w-56' />
+                <img src={AboutImg} alt="aboutImg" className=' md:w-1/2 lg:h-1/2  w-[500px]:w-56' />
             </div>
 
             <div className="into flex justify-center py-3">
