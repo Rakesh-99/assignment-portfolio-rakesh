@@ -127,7 +127,7 @@ const Contact = () => {
                 <form
                     ref={form}
                     onSubmit={formSubmitHandle}
-                    className={`flex flex-col gap-4 hover:scale-95 duration-1000 justify-center lg:w-1/2 md:w-1/2 w-full border rounded-md py-4 px-4 shadow-xl  items-center ${theme === 'dark' ? ' border-zinc-700 hover:border-orange-400 border' : 'hover:border-orange-300'}`}>
+                    className={`flex flex-col gap-4 duration-1000 justify-center lg:w-1/2 md:w-1/2 w-full border rounded-md py-4 px-4 shadow-xl  items-center ${theme === 'dark' ? ' border-zinc-700 hover:border-orange-400 border' : 'hover:border-orange-300'}`}>
 
                     <div className="flex items-center  w-full gap-2">
                         <BiPhoneCall

@@ -56,9 +56,9 @@ const Portfolio = () => {
                         portfolioInfo.map((val, i) => {
                             const { title, content } = val;
                             return (
-                                <div className={`border shadow-md hover:shadow-2xl hover:shadow-cyan-600 transition-all duration-1000 hover:scale-95 rounded-md py-2 flex flex-col gap-5 px-2 ${theme === 'dark' ? 'border-gray-600  shadow-cyan-950' : 'border-gray-300 shadow-cyan-200'}`} key={i}>
-                                    <h1 className='font-semibold text-xl'>{title}</h1>
-                                    <p className='text-start text-sm'>{content}</p>
+                                <div className={`border shadow-md  duration-1000  rounded-md py-2 flex flex-col gap-5 px-2 ${theme === 'dark' ? 'border-gray-600  shadow-cyan-950' : 'border-gray-300 shadow-cyan-200'}`} key={i}>
+                                    <h1 className=' text-xl text-cyan-500 font-semibold'>{title}</h1>
+                                    <p className='text-start font-thin text-sm'>{content}</p>
                                 </div>
                             )
                         })

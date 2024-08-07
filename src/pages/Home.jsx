@@ -69,6 +69,12 @@ const Home = () => {
                 <h1 className='lg:text-4xl text-xl md:text-4xl font-extralight'>Let me <span className=' bg-clip-text bg-gradient-to-r from-cyan-600 via-yellow-500 to-indigo-400 inline-block text-transparent font-semibold'> introduce</span> myself</h1>
 
             </div>
+
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+            />
+
             <p className='w-[90%] leading-7  md:w-[75%]  m-auto my-5 text-justify'>
                 I fell in love with programming and I have at least learnt something,I think..🤷‍♂️
                 I am fluent in classics like Java & Javascript

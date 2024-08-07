@@ -69,7 +69,6 @@ const About = () => {
         {
             skillName: 'Git',
             icon: FaCss3Alt,
-
         },
         {
             skillName: 'HTML5',
@@ -84,10 +83,8 @@ const About = () => {
 
 
 
-    const { educationSlice, skillSlice } = useSelector((state) => state);
+    const educationSlice = useSelector((state) => state.educationSlice);
 
-    const [educationInfo, setEducationInfo] = useState(educationSlice);
-    // const { } = useSelector((state) => state);
     const { theme } = useSelector((state) => state.themeToggle);
 
 
@@ -102,6 +99,7 @@ const About = () => {
 
 
     return (
+        
         <div className=" px-5 flex flex-col w-[95%] md:w-[75%] m-auto">
 
             <div className="heroImg w-full  flex justify-center py-5">
@@ -133,7 +131,7 @@ const About = () => {
 
                 {
 
-                    educationInfo && educationInfo.map((values, i) => {
+                    educationSlice && educationSlice.map((values, i) => {
                         return (
 
                             <div className=" mx-2" key={i}>
