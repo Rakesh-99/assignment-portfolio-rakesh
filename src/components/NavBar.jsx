@@ -94,9 +94,15 @@ const NavBar = () => {
                     navItems.map((values, i) => {
                         const { navText, path, icon: Icon } = values;
                         return (
-                            <div className={`z-20 md:flex lg:flex flex relative top-5 md:static lg:static my-5 lg:my-0 md:my-0  transition-all duration-100 gap-1 items-center ${location.pathname === `${path}` && 'underline underline-offset-8 bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent'}`} key={i}>
-                                <span><Icon size={15} /></span>
-                                <Link onClick={handleHamToggle} to={`${path}`} className='text-sm active:scale-95 transition-all font-semibold'>{navText}</Link>
+                            <div
+                                className={`z-20 md:flex lg:flex justify-start flex relative top-5 md:static lg:static my-5 lg:my-0 md:my-0  transition-all duration-100 gap-1 items-center   ${location.pathname === `${path}` && 'md:border-b  lg:border-b bg-clip-text bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline text-transparent'}`}
+                                key={i}>
+
+                                <span><Icon size={15} className={`${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`} /></span>
+                                <Link
+                                    onClick={handleHamToggle}
+                                    to={`${path}`}
+                                    className='text-sm active:scale-95 transition-all font-semibold'>{navText}</Link>
                             </div>
                         )
                     })
